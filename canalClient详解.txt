@@ -1,0 +1,7 @@
+Mysql5.7开启binlog步骤及注意事项
+https://www.jianshu.com/p/55b0d52edca2
+
+canal客户端_“消息的消费”
+https://blog.csdn.net/u012758088/article/details/78784337
+
+https://blog.csdn.net/kaition/article/details/78801513

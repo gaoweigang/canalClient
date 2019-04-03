@@ -1,0 +1,15 @@
+1.使用show VARIABLES like 'log_bin%'; 命令查看mysql的binlog是否开启
+
+
+2.如果mysql没有开启，则修改windows下的MysSQL为my.ini文件
+log_bin=mysql_bin
+binlog-format=Row
+#mysql master节点，canal模拟成mysql slave节点，在canal的配置中mysql.slaveId不能与此ID相同
+server-id=1
+
+系统变量binlog_format 指定二进制日志的类型。分别有STATEMENT、ROW、MIXED三种值。
+MySQL 5.7.6之前默认为STATEMENT模式。MySQL 5.7.7之后默认为ROW模式。这个参数主要影响主从复制。
+复制的模式有下面几种:基于SQL语句的复制(statement-based replication, SBR)，基于行的复制(row-based replication, RBR)，混合模式复制(mixed-based replication, MBR)。
+
+
+参考：https://www.jianshu.com/p/55b0d52edca2
